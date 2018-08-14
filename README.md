@@ -12,3 +12,4 @@ npm install -g @angular/cli
 
 5. Installing angular materials  npm install --save "@angular/material" "@angular/cdk"
 
+6. Installing Bootstrap - npm install bootstrap@3 jquery --save
