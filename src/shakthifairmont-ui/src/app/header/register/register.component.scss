@@ -1,0 +1,42 @@
+.example-card {
+    max-width: 100%;
+    max-height: 33px;
+    
+  }
+.linespace{
+    margin-bottom: 3px;
+  }
+
+.login-cart-css{
+    
+    min-width: 150px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.form-header-css{
+
+    min-width: 120px;
+    max-width: 400px;
+    width: 100%;
+    margin-left: 50px; 
+}
+.form-field-css{
+
+    min-width: 120px;
+    max-width: 400px;
+    width: 100%;
+    margin-left: 50px; 
+}
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+ 
+// .ng-invalid:not(form)  {
+//     //border-left: 5px solid #a94442; 
+//   }
+.error-txt-color{
+    padding-left: 48px;
+    color: rebeccapurple;
+}
+  

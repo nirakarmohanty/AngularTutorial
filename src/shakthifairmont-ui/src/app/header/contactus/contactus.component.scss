@@ -1,0 +1,49 @@
+.example-card {
+    max-width: 100%;
+    max-height: 33px;    
+  }
+  
+  .example-header-image {
+    //background-image: url('/');
+    background-size: cover;
+  }
+
+  body {
+    font-family: Arial;
+    color: white;
+  }
+  .linespace{
+    margin-bottom: 3px;
+  }
+  // .split {
+  //   height: 60%;
+  //   width: 50%;
+  //   position: fixed;
+  //   z-index: 1;
+  //   top: 40;
+  //   overflow-x: hidden;
+  //   padding-top: 20px;
+  // }
+  
+  // .left { 
+  //   left: 0;
+  //   background-color:aqua;
+  // }
+  
+  // .right {
+  //   right: 0;
+  //   background-color: red;
+  // }
+  
+  // .centered {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   text-align: center;
+  // }
+  
+  // .centered img {
+  //   width: 150px;
+  //   border-radius: 50%;
+  // }

@@ -1,0 +1,61 @@
+<div [class.alternative]="otherTheme">
+<div style="margin-bottom: 3px;"></div>
+<mat-toolbar  class="mat-elevation-z9" color="accent">
+    <mat-card-header>
+        <!-- <div mat-card-avatar class="example-header-image"><img src="/assets/img/location2.jpeg"/></div> -->
+        <mat-card-title>Login</mat-card-title>
+        <mat-card-subtitle>If Not , Register-Yourself</mat-card-subtitle>
+    </mat-card-header>
+
+</mat-toolbar>
+
+<!-- 
+<div style="max-width: 100%;max-height: 173px;">
+    <mat-card class="mat-elevation-z5">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"><img src="/assets/img/location2.jpeg"/></div>
+            <mat-card-title>Login</mat-card-title>
+            <mat-card-subtitle>If Not , Register-Yourself</mat-card-subtitle>
+        </mat-card-header>
+    </mat-card>
+</div> -->
+<br>
+<div style="padding-left: 103px;padding-top: 10px;">
+    <mat-card-content class="login-cart-css mat-elevation-z5">
+        <form class="my-form" #login="ngForm" (ngSubmit)="onSubmit(login)">
+            <mat-card-header class="form-header-css">
+                <mat-card-title>Identify Yourself</mat-card-title>
+            </mat-card-header>
+
+            <mat-form-field class="form-field-css">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="User Name" name="username" required id="username" [(ngModel)]="login.username"
+                    #username="ngModel">
+
+            </mat-form-field>
+
+            <mat-form-field class="form-field-css">
+                <mat-label>Password</mat-label>
+                <!-- <input matInput placeholder="Password" name="password" [type]="hide ? 'password' : 'text'"> -->
+                <input matInput placeholder="Password" name="password" required id="password" [(ngModel)]="login.password"
+                    #password="ngModel" [type]="hide ? 'password' : 'text'">
+
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field>
+
+            <mat-card-actions class="form-field-css">
+                <!-- <button mat-raised-button color="primary">Submit</button> -->
+                <button mat-raised-button color="accent" type="submit" [disabled]="!login.valid" class="btn btn-success">Submit</button>
+                <button mat-raised-button color="accent" routerLink="/home">Cancel</button>
+
+            </mat-card-actions>
+            <mat-card-actions class="form-field-css">
+                <!-- <button mat-raised-button color="acent" routerLink="/register">Register</button> -->
+                <a [routerLink]="['/register']">Click here for Register </a><br>
+
+                <button mat-flat-button (click)="resetUser()">Reset Username or Password</button>
+            </mat-card-actions>
+        </form>
+    </mat-card-content>
+</div>
+</div>

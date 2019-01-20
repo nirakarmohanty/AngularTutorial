@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Hi User</h1>
+<div mat-dialog-content>
+
+    <p style="text-emphasis: inherit">Please fill correct username to reset password</p>
+    <mat-form-field style="width:80%">
+        <mat-label>UserName</mat-label>
+        <input matInput [(ngModel)]="data.username">
+    </mat-form-field>
+    <br>
+    <mat-form-field style="width:80%">
+        <mat-label>Password</mat-label>
+        <input matInput [(ngModel)]="data.password">
+    </mat-form-field>
+    <br>
+    <mat-form-field style="width:80%">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput [(ngModel)]="data.resetpassword">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onNoClick()">No Thanks</button>
+    <button mat-raised-button color="primary" (click)="onOkClick(data)">Ok</button>
+</div>

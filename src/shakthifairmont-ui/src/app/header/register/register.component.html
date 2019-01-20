@@ -1,0 +1,89 @@
+
+   <div class="linespace"> </div> 
+    <mat-card [style.backgroundColor]="'#33b5e5'" class="example-card mat-elevation-z5 ">
+        <mat-card-header >
+          <!-- <div mat-card-avatar class="example-header-image"><img src="/assets/img/location2.jpeg"/></div> -->
+          <mat-card-title>Register</mat-card-title>
+          <mat-card-subtitle>Enter details </mat-card-subtitle>
+        </mat-card-header>
+     </mat-card>
+<br>
+   <mat-card-content>
+      <form class="my-form" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" >
+         <mat-card class="login-cart-css">
+
+            <div class="form-group">
+               <mat-form-field class="form-field-css">
+                  <mat-label>First Name</mat-label>
+                  <input matInput placeholder="First Name" name="fname" required id="fname" [(ngModel)]="registerForm.fname" #fname="ngModel">
+               </mat-form-field>
+            </div>
+
+            <div class="form-group">
+               <mat-form-field class="form-field-css">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput placeholder="Last Name" name="lname" required id="lname" [(ngModel)]="registerForm.lname" #lname="ngModel">
+               </mat-form-field>
+            </div>
+
+            <div class="form-group">
+               <mat-form-field class="form-field-css">
+                  <mat-label>Flat No#</mat-label>
+                  <input matInput placeholder="Flat No#" name="flatno" required id="flatno" [(ngModel)]="registerForm.flatno" #flatno="ngModel">
+               </mat-form-field>
+            </div>
+
+            <div class="form-group">
+               <mat-form-field class="form-field-css">
+                  <mat-label>User name</mat-label>
+                  <input matInput placeholder="User Name" name="username" required min="4" maxlength="10" id="username" [(ngModel)]="registerForm.username" #username="ngModel">
+               </mat-form-field>
+
+               <div class="form-control-feedback error-txt-color" *ngIf="username.errors && (username.dirty || username.touched)">
+                     <p *ngIf="username.errors.required" >user Name is required</p>
+                     <p *ngIf="username.errors.minlength" >User Name must be 8 characters long, we need another {{username.errors.minlength.requiredLength - username.errors.minlength.actualLength}} characters</p>
+                     <p *ngIf="username.errors.maxlength" >User Name must be 10 characters long</p>
+               </div>
+
+
+            </div>
+
+            <div class="form-group">
+               <mat-form-field class="form-field-css">
+                  <mat-label>Email</mat-label>
+                  <input matInput type="email" placeholder="Email" name="email" required  id="email" [(ngModel)]="registerForm.email" #email="ngModel">
+               </mat-form-field>
+
+               <div class="form-control-feedback error-txt-color" *ngIf="email.errors && (email.dirty || email.touched)">
+                  <p *ngIf="email.errors.required" >Email is required</p>
+                  <p *ngIf="email.errors.email" > Email must be a valid email address </p>
+               </div>
+
+            </div>
+
+            <div class="form-group">
+               <mat-form-field class="form-field-css">
+                  <mat-label>Password</mat-label>
+                  <input matInput placeholder="Password" name="password" required minlength="8" maxlength="10" id="password" [(ngModel)]="registerForm.password" #password="ngModel">
+               </mat-form-field>
+               <div class="form-control-feedback error-txt-color" *ngIf="password.errors && (password.dirty || password.touched)">
+                  <p *ngIf="password.errors.required" >Password is required</p>
+                  <p *ngIf="password.errors.minlength" >Password must be 8 characters long, we need another {{password.errors.minlength.requiredLength - password.errors.minlength.actualLength}} characters</p>
+                  <p *ngIf="password.errors.maxlength" >Password must be 10 characters long</p>
+               </div>
+            </div>
+            
+            <mat-card-actions class="form-field-css">
+               <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.valid" class="btn btn-success">Submit</button>
+               <button mat-button routerLink="/cancel">Cancel</button>
+            </mat-card-actions>
+
+         </mat-card>
+      </form>
+
+
+   </mat-card-content>
+<div>
+   {{registerForm.value|json}}
+</div>
+

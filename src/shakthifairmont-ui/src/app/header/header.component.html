@@ -1,0 +1,39 @@
+<div [class.alternative]="otherTheme"></div>
+<mat-toolbar color="primary" class="mat-elevation-z9">
+
+  <span>[Logo] Shakthi Fairmont</span>
+  <span class="sf-toolbar-spacer"></span>
+  <mat-icon routerLink="/home" style="cursor: pointer" color="accent"> home</mat-icon>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu" color="accent">
+    <mat-icon>apps</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu"  color="accent" >
+    <button mat-menu-item routerLink="/aboutus" >
+      <mat-icon>dialpad</mat-icon>
+      <span>AboutUs</span>
+    </button>
+    <button mat-menu-item routerLink="/login" >
+      <mat-icon>perm_identity</mat-icon>
+      <span>Login</span>
+    </button>
+    <button mat-menu-item routerLink="/contactus" >
+      <mat-icon>location_on</mat-icon>
+      <span>ContactUs</span>
+    </button>
+  </mat-menu>
+
+  <button mat-icon-button [matMenuTriggerFor]="menucolor" color="accent">
+    <mat-icon>invert_colors</mat-icon>
+  </button>
+  <mat-menu #menucolor="matMenu"  color="accent" >
+    <button (click)="changeTheme('default-theme')" mat-menu-item>Default</button>
+    <button (click)="changeTheme('dark-theme')" mat-menu-item>Dark</button>
+    <button (click)="changeTheme('light-theme')" mat-menu-item>Light</button>
+    <button (click)="changeTheme('alternative-theme')" mat-menu-item>Alternative</button>
+  </mat-menu>
+
+
+
+
+</mat-toolbar>

@@ -1,0 +1,16 @@
+.sf-toolbar-spacer {
+    flex: 1 1 auto;
+  }
+
+  .mat-menu-item {
+    color: blue !important;
+  }
+  
+  button.mat-menu-item{
+      background-color:white;
+  }
+  
+  button.mat-menu-item:hover {
+      background-color:#0288D1;
+      color: #fff !important;
+  }
